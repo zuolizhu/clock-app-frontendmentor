@@ -1,17 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import clsx from 'clsx';
 import './App.scss';
 
-// temp data for now
-import staticData from './staticData'
+// components
+import Location from './components/Location'
+import MainClock from './components/MainClock';
+import Quotes from './components/Quotes';
+import ButtonMore from './components/ButtonMore';
+import MoreDetail from './components/MoreDetail';
 
 function App() {
-  const { isDayTime } = staticData();
-  const AppClasses = clsx("App", { 'day': isDayTime(), 'night': !isDayTime() });
-
+  const isDayTime = true;
+  const [isActive, setIsActive] = useState(true);
+  const handleMoreClick = () => setIsActive(prevStatus => !prevStatus);
+  const AppClasses = clsx('App', { 'day': isDayTime, 'night': !isDayTime });
+  const ContainerMainClasses = clsx('container__main', { 'active': isActive });
+  const ContainerMoreClasses = clsx('container__more', { 'active': isActive });
   return (
     <div className={AppClasses}>
-      <div className="testblock"></div>
+      <div className={ContainerMainClasses}>
+        <Quotes />
+        <MainClock />
+        <Location />
+        <ButtonMore onMoreButtonClick={handleMoreClick} isActive={isActive} />
+      </div>
+      <div className={ContainerMoreClasses}>
+        <MoreDetail />
+      </div>
     </div>
   );
 }

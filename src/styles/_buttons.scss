@@ -1,0 +1,35 @@
+.btn {
+  cursor: pointer;
+  display: inline-flex;
+  &:focus {
+    outline: none;
+  }
+
+  &--refresh {
+    margin-left: 1.5rem;
+  }
+
+  &--more {
+    width: 11.5rem;
+    height: 3.9rem;
+    padding-left: 2rem;
+    align-items: center;
+    padding-right: .4rem;
+    border-radius: 2.8rem;
+    justify-content: space-between;
+    font-weight: var(--weight-bold);
+    background-color: var(--color-white);
+    img {
+      width: 3.2rem;
+      height: 3.2rem;
+      transform: rotate(180deg);
+      transition: var(--transition) transform;
+    }
+
+    &.active {
+      img {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
