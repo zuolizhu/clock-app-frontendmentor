@@ -17,7 +17,7 @@ function App() {
   const [isDayTime, setIsDayTime] = useState(true);
   const [isStaticData, setIsStaticData] = useState(true);
 
-  // const AppClasses = clsx('App', { 'day': isDayTime, 'night': !isDayTime });
+  const AppClasses = clsx('App', { 'day': isDayTime, 'night': !isDayTime });
   const ContainerMainClasses = clsx('container__main', { 'active': isActive });
   const ContainerMoreClasses = clsx('container__more', { 'active': isActive });
 
@@ -54,17 +54,17 @@ function App() {
         setLocation(data[1]);
         checkDayTime(data[0]);
         // only allow dynamic data if all 
-        // data has been fetched successfully
-        // setIsStaticData(false);
+        //data has been fetched successfully
+        setIsStaticData(false);
       }
       
     }).catch(function (error) {
       console.error(error);
     }).finally(() => {
       // after all data loaded
-      // timeLine.fromTo(overlayRef.current, { opacity: 1, y: '0%' }, { opacity: 0, y: '-100%', duration: 1, delay: 2.5 });
-      // timeLine.fromTo(mainClockRef.current, { opacity: 0, y: '50%' }, { opacity: 1, y: '0%', duration: 0.5 }, "-=0.75");
-      // timeLine.fromTo(buttonRef.current, { opacity: 0, y: '-50%' }, { opacity: 1, y: '0%', duration: 0.5 }, "-=0.75");
+      timeLine.fromTo(overlayRef.current, { opacity: 1, y: '0%' }, { opacity: 0, y: '-100%', duration: 1, delay: 2.5 });
+      timeLine.fromTo(mainClockRef.current, { opacity: 0, y: '50%' }, { opacity: 1, y: '0%', duration: 0.5 }, "-=0.75");
+      timeLine.fromTo(buttonRef.current, { opacity: 0, y: '-50%' }, { opacity: 1, y: '0%', duration: 0.5 }, "-=0.75");
     });
   }, []);
 
@@ -84,9 +84,8 @@ function App() {
   })
 
   return (
-    // <div className={AppClasses}>
-    <div className="App day">
-      {/* <IntroOverlay overlayRef={overlayRef} /> */}
+    <div className={AppClasses}>
+      <IntroOverlay overlayRef={overlayRef} />
       <div className={ContainerMainClasses}>
         <div className="inner__container">
           <Quotes isStaticData={isStaticData} isActive={isActive} />

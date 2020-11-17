@@ -14,8 +14,7 @@ export default function MainClock({ mainClockRef, time, location, isDayTime, isS
     <div ref={mainClockRef} className="main-clock">
       <div className="greeting">
         <span className="greeting__icon"><img src={isDayTime ? IconSun : IconMoon} alt="greeting icon"/></span>
-        {/* <p className="t-greeting">Good {isDayTime ? 'morning':'evening'}<span className="hide-on-mobile">, it’s currently</span></p> */}
-        <p className="t-greeting">Good morning<span className="hide-on-mobile">, it’s currently</span></p>
+        <p className="t-greeting">Good {isDayTime ? 'morning':'evening'}<span className="hide-on-mobile">, it’s currently</span></p>
       </div>
       <div className="current-time">
         <h1 className="t-time">{isStaticData ? '11:37' : getTime(time.datetime)}</h1>
