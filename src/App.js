@@ -9,7 +9,7 @@ import ButtonMore from './components/ButtonMore';
 import MoreDetail from './components/MoreDetail';
 
 function App() {
-  const isDayTime = true;
+  const isDayTime = false;
   const [isActive, setIsActive] = useState(false);
   const handleMoreClick = () => setIsActive(prevStatus => !prevStatus);
   const AppClasses = clsx('App', { 'day': isDayTime, 'night': !isDayTime });

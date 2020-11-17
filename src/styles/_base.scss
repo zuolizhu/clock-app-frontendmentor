@@ -188,7 +188,6 @@ button {
   font-size: 1rem;
   line-height: 2.8rem;
   letter-spacing: 2px;
-  color: var(--color-white);
   text-transform: uppercase;
   font-weight: var(--weight-regular);
   @media (min-width: 768px) {
@@ -200,13 +199,27 @@ button {
   font-size: 2rem;
   line-height: 2.4rem;
   letter-spacing: 0px;
-  color: var(--color-white);
   font-weight: var(--weight-bold);
   @media (min-width: 768px) {
     font-size: 4rem;
     line-height: 4.9rem;
   }
 }
+
+// font color changes by day
+.day .t-detail-field {
+  color: var(--color-dark-gray);
+}
+.day .t-detail-field-content {
+  color: var(--color-dark-gray);
+}
+.night .t-detail-field {
+  color: var(--color-white);
+}
+.night .t-detail-field-content {
+  color: var(--color-white);
+}
+
 
 .sr-only {
   padding: 0;

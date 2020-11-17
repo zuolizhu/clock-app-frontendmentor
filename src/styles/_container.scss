@@ -15,6 +15,10 @@
   height: calc(100% - 25.6rem);
   @media (min-width: 768px) {
     height: calc(100% - 44rem);
+    
+  }
+  @media (min-width: 1024px) {
+    height: calc(100% - 40rem);
   }
 }
 
@@ -22,9 +26,11 @@
   height: 100%;
   display: flex;
   margin: 0 auto;
-  max-width: 111rem;
-  max-height: 64.6rem;
   flex-direction: column;
+  @media (min-width: 1024px) {
+    max-width: 111rem;
+    max-height: 64.6rem;
+  }
 }
 
 .container__more {
@@ -36,6 +42,9 @@
   @media (min-width: 768px) {
     padding: 11.9rem 6.4rem;
   }
+  @media (min-width: 1024px) {
+    padding: 7.4rem 16.5rem;
+  }
 }
 
 .container__more.active {
@@ -43,4 +52,14 @@
   @media (min-width: 768px) {
     height: 44rem;
   }
+  @media (min-width: 1024px) {
+    height: 40rem;
+  }
+}
+
+.day .container__more {
+  background-color: rgba(255, 255, 255, .75);
+}
+.night .container__more {
+  background-color: rgba(0, 0, 0, .75);
 }
