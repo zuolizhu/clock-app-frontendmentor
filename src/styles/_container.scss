@@ -7,6 +7,9 @@
   @media (min-width: 768px) {
     padding: 8rem 6.4rem 6.4rem;
   }
+  @media (min-width: 1024px) {
+    padding: 5.6rem 5.6rem 9.8rem;
+  }
 }
 .container__main.active {
   height: calc(100% - 25.6rem);
@@ -20,6 +23,7 @@
   display: flex;
   margin: 0 auto;
   max-width: 111rem;
+  max-height: 64.6rem;
   flex-direction: column;
 }
 

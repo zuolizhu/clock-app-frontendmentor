@@ -3,7 +3,6 @@ import clsx from 'clsx';
 import './App.scss';
 
 // components
-import Location from './components/Location'
 import MainClock from './components/MainClock';
 import Quotes from './components/Quotes';
 import ButtonMore from './components/ButtonMore';
