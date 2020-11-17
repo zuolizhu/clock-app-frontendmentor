@@ -8,7 +8,7 @@ export default function MainClock({ mainClockRef, time, location, isDayTime }) {
 
   function getTime(datetime) {
     const timeObj = new Date(datetime);
-    return `${timeObj.getHours()}:${timeObj.getMinutes()}`;
+    return `${timeObj.getHours()}:${String(timeObj.getMinutes()).padStart(2, '0')}`;
   }
 
   return (

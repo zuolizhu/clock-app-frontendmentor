@@ -23,7 +23,6 @@ function App() {
   const overlayRef = useRef(null);
   const mainClockRef = useRef(null);
   const buttonRef = useRef(null);
-  const quotesRef = useRef(null);
 
   const checkDayTime = (timeobj) => {
     const currentHours = new Date(timeobj.datetime).getHours();
@@ -52,14 +51,14 @@ function App() {
       setTime(data[0]);
       setLocation(data[1]);
       checkDayTime(data[0]);
+      
+    }).catch(function (error) {
+      console.error(error);
+    }).finally(() => {
       // after all data loaded
       timeLine.fromTo(overlayRef.current, { opacity: 1, y: '0%' }, { opacity: 0, y: '-100%', duration: 1, delay: 2.5 });
       timeLine.fromTo(mainClockRef.current, { opacity: 0, y: '50%' }, { opacity: 1, y: '0%', duration: 0.5 }, "-=0.75");
       timeLine.fromTo(buttonRef.current, { opacity: 0, y: '-50%' }, { opacity: 1, y: '0%', duration: 0.5 }, "-=0.75");
-      timeLine.fromTo(quotesRef.current, { opacity: 0, y: '100%' }, { opacity: 1, y: '0%', duration: 0.75 });
-
-    }).catch(function (error) {
-      console.error(error);
     });
   }, []);
 
@@ -83,7 +82,7 @@ function App() {
       <IntroOverlay overlayRef={overlayRef} />
       <div className={ContainerMainClasses}>
         <div className="inner__container">
-          <Quotes quotesRef={quotesRef} isActive={isActive} />
+          <Quotes isActive={isActive} />
           <div className="main-clock-container">
             <MainClock mainClockRef={mainClockRef} time={time} location={location} isDayTime={isDayTime} />
             <ButtonMore buttonRef={buttonRef} onMoreButtonClick={handleMoreClick} isActive={isActive} />
