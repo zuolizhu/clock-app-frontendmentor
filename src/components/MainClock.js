@@ -3,9 +3,8 @@ import IconSun from '../assets/desktop/icon-sun.svg';
 import IconMoon from '../assets/desktop/icon-moon.svg';
 import Location from '../components/Location';
 
-export default function MainClock({ mainClockRef, time, location, isDayTime }) {
-  const isStaticData = false;
-
+export default function MainClock({ mainClockRef, time, location, isDayTime, isStaticData }) {
+  
   function getTime(datetime) {
     const timeObj = new Date(datetime);
     return `${timeObj.getHours()}:${String(timeObj.getMinutes()).padStart(2, '0')}`;

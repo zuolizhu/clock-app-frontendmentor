@@ -194,6 +194,10 @@ button {
     font-size: 1.3rem;
     letter-spacing: 2.6px;
   }
+  @media (min-width: 1024px) {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+  }
 }
 .t-detail-field-content {
   font-size: 2rem;
@@ -203,6 +207,10 @@ button {
   @media (min-width: 768px) {
     font-size: 4rem;
     line-height: 4.9rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 5.6rem;
+    line-height: 6.8rem;
   }
 }
 

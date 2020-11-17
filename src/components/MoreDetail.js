@@ -1,7 +1,6 @@
 import React from 'react';
 
-export default function MoreDetail({ detail }) {
-  const isStaticData = false;
+export default function MoreDetail({ detail, isStaticData }) {
   return (
     <div className="more-detail">
       <div className="more-detail__field">

@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import IconRefresh from '../assets/desktop/icon-refresh.svg';
 
-export default function Quotes({ isActive }) {
+export default function Quotes({ isActive, isStaticData }) {
   const quotesContainerClasses = clsx('quotes-container', { 'hide': isActive });
   return (
     <div className={quotesContainerClasses}>
