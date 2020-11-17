@@ -257,4 +257,90 @@ button {
   height: 100%;
   background-color: var(--color-dark-gray);
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@-webkit-keyframes mask-move {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(129px);
+            transform: translateX(129px);
+  }
+}
+@keyframes mask-move {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(129px);
+            transform: translateX(129px);
+  }
+}
+@-webkit-keyframes mask-inner-move {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-129px);
+            transform: translateX(-129px);
+  }
+}
+@keyframes mask-inner-move {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-129px);
+            transform: translateX(-129px);
+  }
+}
+
+.focus {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--color-white);
+  letter-spacing: .2rem;
+  line-height: 1;
+  position: relative;
+  width: 179px;
+}
+.focus:before {
+  content: 'LOADING';
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+.focus:after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: calc(100% + 8px);
+  top: -4px;
+  left: 0;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  -webkit-animation: mask-move 2s linear infinite alternate;
+          animation: mask-move 2s linear infinite alternate;
+}
+.focus--mask {
+  overflow: hidden;
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--color-dark-gray);
+  -webkit-animation: mask-move 2s linear infinite alternate;
+          animation: mask-move 2s linear infinite alternate;
+}
+.focus--mask-inner {
+  -webkit-animation: mask-inner-move 2s linear infinite alternate;
+          animation: mask-inner-move 2s linear infinite alternate;
 }

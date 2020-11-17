@@ -53,7 +53,7 @@ function App() {
       setLocation(data[1]);
       checkDayTime(data[0]);
       // after all data loaded
-      timeLine.fromTo(overlayRef.current, { opacity: 1, y: '0%' }, { opacity: 0, y: '-100%', duration: 1, delay: 0.5 });
+      timeLine.fromTo(overlayRef.current, { opacity: 1, y: '0%' }, { opacity: 0, y: '-100%', duration: 1, delay: 2.5 });
       timeLine.fromTo(mainClockRef.current, { opacity: 0, y: '50%' }, { opacity: 1, y: '0%', duration: 0.5 }, "-=0.75");
       timeLine.fromTo(buttonRef.current, { opacity: 0, y: '-50%' }, { opacity: 1, y: '0%', duration: 0.5 }, "-=0.75");
       timeLine.fromTo(quotesRef.current, { opacity: 0, y: '100%' }, { opacity: 1, y: '0%', duration: 0.75 });
