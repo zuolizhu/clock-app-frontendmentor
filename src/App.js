@@ -56,6 +56,8 @@ function App() {
       .then(data => setTime(data))
       .catch(error => console.error(error));
     }, 30000);
+    
+    // cleanup on unmounted
     return () => {
       clearInterval(intervalId);
     }
@@ -73,7 +75,7 @@ function App() {
         </div>
       </div>
       <div className={ContainerMoreClasses}>
-        <MoreDetail />
+        <MoreDetail detail={time} />
       </div>
     </div>
   );
