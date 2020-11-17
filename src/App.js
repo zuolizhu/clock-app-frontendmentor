@@ -41,7 +41,7 @@ function App() {
     const timeLine = gsap.timeline();
 
     Promise.all([
-      fetch('http://worldtimeapi.org/api/ip'),
+      fetch('https://worldtimeapi.org/api/ip'),
       fetch('https://freegeoip.app/json/'),
 
     ]).then(function (responses) {
