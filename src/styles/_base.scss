@@ -160,6 +160,11 @@ button {
   letter-spacing: 3.75px;
   color: var(--color-black);
   text-transform: uppercase;
+  @media (min-width: 768px) {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    letter-spacing: 5px;
+  }
 }
 
 .t-location {
@@ -178,6 +183,10 @@ button {
   color: var(--color-white);
   text-transform: uppercase;
   font-weight: var(--weight-regular);
+  @media (min-width: 768px) {
+    font-size: 1.3rem;
+    letter-spacing: 2.6px;
+  }
 }
 .t-detail-field-content {
   font-size: 2rem;
@@ -185,6 +194,10 @@ button {
   letter-spacing: 0px;
   color: var(--color-white);
   font-weight: var(--weight-bold);
+  @media (min-width: 768px) {
+    font-size: 4rem;
+    line-height: 4.9rem;
+  }
 }
 
 .sr-only {
@@ -205,4 +218,11 @@ button {
   position: relative;
   padding-bottom: 4rem;
   flex-direction: column;
+}
+
+.hide-on-mobile {
+  display: none;
+  @media (min-width: 768px) {
+    display: inline;
+  }
 }

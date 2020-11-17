@@ -19,11 +19,24 @@
     justify-content: space-between;
     font-weight: var(--weight-bold);
     background-color: var(--color-white);
+    @media (min-width: 768px) {
+      height: 5.6rem;
+      // avoid height change on animation
+      min-height: 5.6rem;
+      width: 14.6rem;
+      padding-left: 2.5rem;
+      padding-right: .9rem;
+    }
+
     img {
       width: 3.2rem;
       height: 3.2rem;
       transform: rotate(180deg);
       transition: var(--transition) transform;
+      @media (min-width: 768px) {
+        width: 4rem;
+        height: 4rem;
+      }
     }
 
     &.active {

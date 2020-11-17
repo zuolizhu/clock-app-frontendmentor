@@ -8,7 +8,7 @@ export default function MainClock() {
     <div className="main-clock">
       <div className="greeting">
         <span className="greeting__icon"><img src={isDayTime ? IconSun : IconMoon} alt="greeting icon"/></span>
-        <p className="t-greeting">Goog evening</p>
+        <p className="t-greeting">Goog evening<span className="hide-on-mobile">, it’s currently</span></p>
       </div>
       <div className="current-time">
         <h1 className="t-time">23:14</h1>

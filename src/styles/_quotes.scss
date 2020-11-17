@@ -1,4 +1,22 @@
 .quotes-container {
+  opacity: 1;
   display: flex;
+  max-height: 37rem;
+  max-width: 57.3rem;
   align-items: flex-start;
+  transform: translateY(0);
+  transition: var(--transition) opacity, var(--transition) transform, var(--transition) max-height;
+
+  .quotes__author {
+    margin-top: .8rem;
+    @media (min-width: 768px) {
+      margin-top: 1.3rem;
+    }
+  }
+
+  &.hide {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-6rem);
+  }
 }

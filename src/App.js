@@ -11,7 +11,7 @@ import MoreDetail from './components/MoreDetail';
 
 function App() {
   const isDayTime = true;
-  const [isActive, setIsActive] = useState(true);
+  const [isActive, setIsActive] = useState(false);
   const handleMoreClick = () => setIsActive(prevStatus => !prevStatus);
   const AppClasses = clsx('App', { 'day': isDayTime, 'night': !isDayTime });
   const ContainerMainClasses = clsx('container__main', { 'active': isActive });
@@ -19,7 +19,7 @@ function App() {
   return (
     <div className={AppClasses}>
       <div className={ContainerMainClasses}>
-        <Quotes />
+        <Quotes isActive={isActive} />
         <MainClock />
         <Location />
         <ButtonMore onMoreButtonClick={handleMoreClick} isActive={isActive} />
