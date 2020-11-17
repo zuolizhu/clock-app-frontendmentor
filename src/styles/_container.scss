@@ -9,6 +9,8 @@
   }
   @media (min-width: 1024px) {
     padding: 5.6rem 5.6rem 9.8rem;
+    display: flex;
+    align-items: center;
   }
 }
 .container__main.active {
@@ -30,6 +32,7 @@
   @media (min-width: 1024px) {
     max-width: 111rem;
     max-height: 64.6rem;
+    width: 100%;
   }
 }
 
