@@ -6,6 +6,10 @@
   align-items: flex-start;
   transform: translateY(0);
   transition: var(--transition) opacity, var(--transition) transform, var(--transition) max-height;
+  @media (min-width: 1024px) {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
 
   .quotes__author {
     margin-top: .8rem;

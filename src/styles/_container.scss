@@ -1,11 +1,9 @@
+
 .container__main {
   height: 100%;
-  display: flex;
-  flex-direction: column;
   padding: 3.167rem 2.6rem 4rem;
   background-color: rgba(0, 0, 0, .40);
   transition: var(--transition) height;
-  
   @media (min-width: 768px) {
     padding: 8rem 6.4rem 6.4rem;
   }
@@ -15,6 +13,14 @@
   @media (min-width: 768px) {
     height: calc(100% - 44rem);
   }
+}
+
+.inner__container {
+  height: 100%;
+  display: flex;
+  margin: 0 auto;
+  max-width: 111rem;
+  flex-direction: column;
 }
 
 .container__more {

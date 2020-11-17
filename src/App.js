@@ -19,10 +19,13 @@ function App() {
   return (
     <div className={AppClasses}>
       <div className={ContainerMainClasses}>
-        <Quotes isActive={isActive} />
-        <MainClock />
-        <Location />
-        <ButtonMore onMoreButtonClick={handleMoreClick} isActive={isActive} />
+        <div className="inner__container">
+          <Quotes isActive={isActive} />
+          <div className="main-clock-container">
+            <MainClock />
+            <ButtonMore onMoreButtonClick={handleMoreClick} isActive={isActive} />
+          </div>
+        </div>
       </div>
       <div className={ContainerMoreClasses}>
         <MoreDetail />

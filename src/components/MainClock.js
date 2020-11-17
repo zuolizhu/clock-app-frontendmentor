@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 import IconSun from '../assets/desktop/icon-sun.svg';
 import IconMoon from '../assets/desktop/icon-moon.svg';
+import Location from '../components/Location';
 
 export default function MainClock() {
   const isDayTime = false;
@@ -14,6 +15,7 @@ export default function MainClock() {
         <h1 className="t-time">23:14</h1>
         <p className="t-timezone current-time__timezone">BST</p>
       </div>
+      <Location />
     </div>
   )
 }
