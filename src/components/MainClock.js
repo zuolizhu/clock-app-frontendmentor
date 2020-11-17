@@ -3,7 +3,7 @@ import IconSun from '../assets/desktop/icon-sun.svg';
 import IconMoon from '../assets/desktop/icon-moon.svg';
 import Location from '../components/Location';
 
-export default function MainClock({ time, location, isDayTime }) {
+export default function MainClock({ mainClockRef, time, location, isDayTime }) {
   const isStaticData = false;
 
   function getTime(datetime) {
@@ -12,7 +12,7 @@ export default function MainClock({ time, location, isDayTime }) {
   }
 
   return (
-    <div className="main-clock">
+    <div ref={mainClockRef} className="main-clock">
       <div className="greeting">
         <span className="greeting__icon"><img src={isDayTime ? IconSun : IconMoon} alt="greeting icon"/></span>
         <p className="t-greeting">Good {isDayTime ? 'morning':'evening'}<span className="hide-on-mobile">, it’s currently</span></p>
