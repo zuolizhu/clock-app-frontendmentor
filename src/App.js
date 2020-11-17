@@ -17,7 +17,7 @@ function App() {
   const [isDayTime, setIsDayTime] = useState(true);
   const [isStaticData, setIsStaticData] = useState(true);
 
-  const AppClasses = clsx('App', { 'day': isDayTime, 'night': !isDayTime });
+  // const AppClasses = clsx('App', { 'day': isDayTime, 'night': !isDayTime });
   const ContainerMainClasses = clsx('container__main', { 'active': isActive });
   const ContainerMoreClasses = clsx('container__more', { 'active': isActive });
 
@@ -84,7 +84,8 @@ function App() {
   })
 
   return (
-    <div className={AppClasses}>
+    // <div className={AppClasses}>
+    <div className="App day">
       {/* <IntroOverlay overlayRef={overlayRef} /> */}
       <div className={ContainerMainClasses}>
         <div className="inner__container">
